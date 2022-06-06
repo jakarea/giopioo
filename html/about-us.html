@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giopio Official Website Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.helper.ie8.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-montserrat">
+    <!--Header Section [Start]-->
+    <header class="fixed left-0 right-0 top-0 z-50 py-4 bg-white lg:py-0 lg:bg-transparent duration-300">
+        <div class="container">
+            <div class="relative">
+                <nav class="flex justify-between items-center xl:mr-44">
+                    <a href="index.html"><img src="assets/images/logo-black.png" alt="Giopio"></a>
+                    <div class="mobile-nav lg:flex items-center text-base font-medium">
+                        <div class="mobile-logo flex lg:hidden justify-between mb-5">
+                            <a href="index.html"><img class="h-8" src="assets/images/logo-black.png" alt="Giopio"></a>
+                            <span class="mobile-menu-close"><i class="fa-solid fa-xmark"></i></span>
+                        </div>
+                        <ul class="lg:flex gap-10 text-giopio-text mb-5 md:mb-0">
+                            <li class="group">
+                                <a href="#" class="giopio-navlink why-giopio-link">Why Giopio<i class="fa-solid fa-chevron-down text-xs text-giopio-text ml-2 opacity-80"></i></a>
+                                <div class="lg:opacity-0 lg:invisible duration-300 group-hover:opacity-100 group-hover:visible mega-menu lg:fixed lg:w-screen lg:left-0 bg-white z-50 pb-8 lg:pb-14 mb-10 lg:mb-0">
+                                    <div class="hidden lg:block border-b border-b-giopio-border-2 pb-6 my-10">
+                                        <div class="container">
+                                            <div class="grid grid-cols-3 font-medium text-sm gap-8">
+                                                <div>Learn & help</div>
+                                                <div>Giopio Services</div>
+                                                <div>Recent Blog Posts</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pt-5 lg:pt-0">
+                                        <div class="container">
+                                            <div class="block lg:grid grid-cols-3 gap-8">
+                                                <div class="mb-14 lg:mb-0">
+                                                    <div class="font-medium text-sm mb-5 border-b border-b-giopio-border-2 pb-3 block lg:hidden">Learn & help</div>
+                                                    <ul class="text-sm font-medium space-y-3 mb-12">
+                                                        <li><a href="#" class="duration-300 hover:text-giopio-orange">Terms & Policy</a></li>
+                                                        <li><a href="#" class="duration-300 hover:text-giopio-orange">24/7 Support</a></li>
+                                                        <li><a href="#" class="duration-300 hover:text-giopio-orange">Easy Payments</a></li>
+                                                        <li><a href="#" class="duration-300 hover:text-giopio-orange">Security</a></li>
+                                                    </ul>
+                                                    <div class="magamenu-discount mb-10 lg:mb-20 relative z-10">
+                                                        <div class="bg-giopio-text-blue w-3/12 h-20 fixed left-0 -z-10 mega-discount-blue-strip"></div>
+                                                        <p class=" text-white pt-3">Earn <span class=" font-bold text-xl italic m-0">50%</span> discount<br> on your first project</p>
+                                                    </div>
+                                                    <a href="#" class="giopio-btn-black text-xs lg:text-base font-medium hover:bg-giopio-orange px-4 lg:px-8 2xl:px-10 w-full lg:w-auto">Start A Project With Us</a>
+                                                </div>
+                                                <div class="mb-14 lg:mb-0">
+                                                    <div class="font-medium text-sm mb-5 border-b border-b-giopio-border-2 pb-3 block lg:hidden">Giopio Services</div>
+                                                    <a href="#" class="block lg:flex gap-4 mb-10 md:mb-7">
+                                                        <div class="w-9 h-9 rounded border-giopio-border-2 border flex items-center p-2 mb-5 lg:mb-0">
+                                                            <img class="max-h-5 mx-auto" src="assets/images/facebook-app-development.png" alt="Facebook App Development">
+                                                        </div>
+                                                        <div class="lg:md:w-[calc(100%_-_2.25rem)]">
+                                                            <h4 class="text-sm font-semibold text-giopio-black mb-3 duration-300 hover:text-giopio-orange">Facebook App Development</h4>
+                                                            <p class="text-sm font-medium text-giopio-text leading-7">Lorem ipsum dolor sit amet, consectetur ut labore et dolore magna aliqua.</p>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="block lg:flex gap-4 mb-10 md:mb-7">
+                                                        <div class="w-9 h-9 rounded border-giopio-border-2 border flex items-center p-2 mb-5 lg:mb-0">
+                                                            <img class="max-h-5 mx-auto" src="assets/images/web-design-development.png" alt="Facebook App Development">
+                                                        </div>
+                                                        <div class="lg:md:w-[calc(100%_-_2.25rem)]">
+                                                            <h4 class=" text-sm font-semibold text-giopio-black mb-3 duration-300 hover:text-giopio-orange">Web Design & Development</h4>
+                                                            <p class="text-sm font-medium text-giopio-text leading-7">Lorem ipsum dolor sit amet, consectetur ut labore et dolore magna aliqua.</p>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="block lg:flex gap-4 mb-10 md:mb-7">
+                                                        <div class="w-9 h-9 rounded border-giopio-border-2 border flex items-center p-2 mb-5 lg:mb-0">
+                                                            <img class="max-h-5 mx-auto" src="assets/images/wp-theme-plugin-development.png" alt="Facebook App Development">
+                                                        </div>
+                                                        <div class="lg:md:w-[calc(100%_-_2.25rem)]">
+                                                            <h4 class=" text-sm font-semibold text-giopio-black mb-3 duration-300 hover:text-giopio-orange">Wp Theme & Plugin Development</h4>
+                                                            <p class="text-sm font-medium text-giopio-text leading-7">Lorem ipsum dolor sit amet, consectetur ut labore et dolore magna aliqua.</p>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="block lg:hidden 2xl:flex gap-4 mb-10 md:mb-7">
+                                                        <div class="w-9 h-9 rounded border-giopio-border-2 border flex items-center p-2 mb-5 lg:mb-0">
+                                                            <img class="max-h-5 mx-auto" src="assets/images/digital-marketing.png" alt="Facebook App Development">
+                                                        </div>
+                                                        <div class="lg:md:w-[calc(100%_-_2.25rem)]">
+                                                            <h4 class=" text-sm font-semibold text-giopio-black mb-3">Digital Marketing</h4>
+                                                            <p class="text-sm font-medium text-giopio-text leading-7">Lorem ipsum dolor sit amet, consectetur ut labore et dolore magna aliqua.</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div>
+                                                    <div class="font-medium text-sm mb-5 border-b border-b-giopio-border-2 pb-3 block lg:hidden">Recent Blog Posts</div>
+                                                    <div class="mb-10">
+                                                        <div class="md:flex gap-4 items-center mb-10 md:mb-7">
+                                                            <div class="mb-5 md:mb-0 rounded-lg overflow-hidden w-20 h-20">
+                                                                <img class="w-full h-full object-cover rounded-lg" src="assets/images/blog-1.jpg" alt="">
+                                                            </div>
+                                                            <div class="md:w-[calc(100%_-_5rem)]">
+                                                                <h4 class="text-sm font-semibold mb-2"><a class="text-giopio-black duration-300 hover:text-giopio-orange" href="blog-details.html">Benefits Of Virtual Teams And It’s Challenges In 2022</a></h4>
+                                                                <a href="#" class="text-giopio-text-blue duration-300 hover:text-giopio-orange">Read More…</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="md:flex gap-4 items-center mb-10 md:mb-7">
+                                                            <div class="mb-5 md:mb-0 rounded-lg overflow-hidden w-20 h-20">
+                                                                <img class="w-full h-full object-cover rounded-lg" src="assets/images/blog-1.jpg" alt="">
+                                                            </div>
+                                                            <div class="md:w-[calc(100%_-_5rem)]">
+                                                                <h4 class="text-sm font-semibold mb-2"><a class="text-giopio-black duration-300 hover:text-giopio-orange" href="blog-details.html">Benefits Of Virtual Teams And It’s Challenges In 2022</a></h4>
+                                                                <a href="#" class="text-giopio-text-blue duration-300 hover:text-giopio-orange">Read More…</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="md:flex gap-4 items-center mb-10 md:mb-7">
+                                                            <div class="mb-5 md:mb-0 rounded-lg overflow-hidden w-20 h-20">
+                                                                <img class="w-full h-full object-cover rounded-lg" src="assets/images/blog-1.jpg" alt="">
+                                                            </div>
+                                                            <div class="md:w-[calc(100%_-_5rem)]">
+                                                                <h4 class="text-sm font-semibold mb-2"><a class="text-giopio-black duration-300 hover:text-giopio-orange" href="blog-details.html">Benefits Of Virtual Teams And It’s Challenges In 2022</a></h4>
+                                                                <a href="#" class="text-giopio-text-blue duration-300 hover:text-giopio-orange">Read More…</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <a href="blog.html" class="font-semibold text-giopio-orange text-base duration-300 hover:text-giopio-black">Read All Blogs<i class="fa-solid fa-arrow-right-long ml-3"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="about-us.html" class="giopio-navlink">About</a></li>
+                            <li><a href="blog.html" class="giopio-navlink">Blog</a></li>
+                            <li><a href="index.html#contact-us" class="giopio-navlink">Contact</a></li>
+                        </ul>
+                        <button id="openGiopioModal" class="giopio-btn text-sm 2xl:text-base font-medium px-5 2xl:px-6 lg:ml-36 hover:bg-giopio-black">Start A Project</button>
+                    </div>
+                    <div class="block lg:hidden">
+                        <div class="w-10 h-10 leading-10 giopio-btn mobile-menu-trigger px-2 py-3 rounded-md duration-300 hover:bg-giopio-black">
+                            <span class="mobile-menu-bar mb-1"></span>
+                            <span class="mobile-menu-bar mb-1"></span>
+                            <span class="mobile-menu-bar"></span>
+                        </div>
+                        <div class="mobile-black-screen"></div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!--Header Section [End]-->
+
+    <!--About Banner Section [Start]-->
+    <section class="relative mt-28">
+        <div class="container">
+            <div class="lg:flex pt-10 md:pt-20 lg:mx-36 items-center pb-28">
+                <div class="mb-10 md:mb-16 lg:mb-0 lg:banner-title-box">
+                    <div class="lg:hidden w-20 h-1 bg-giopio-orange mb-4"></div>
+                    <h1 class="text-giopio-black giopio-title-size font-bold mb-8 lg:mb-0 lg:banner-title">About</h1>
+                </div>
+                <div class="text-giopio-text text-sm 2xl:text-base lg:pl-14 lg:about-banner-text font-medium leading-relaxed">
+                    <p class="mb-8">Giopio is a professional web application services provider that specializes in delivering fully managed solutions based on PHP, Laravel, and so on. We deliver end-to-end web application development, Quality assurance, and support solutions.</p>
+                    <p class="mb-8">Giopio teams are passionate about transparency, reliability, trust, and outstanding customer care – we aren’t happy with our creation until you are.</p>
+                    <p class="mb-8">Giopio has completed over two Hundred big projects for local clients in Bangladesh. Most of the customers are SaaS companies, dynamic startups, and educational institutions.</p>
+                    <p class="mb-8">We work on different CMS and Frameworks like Laravel, Codeigniter, WordPress, Shopify, etc, and at the same time work on Nodejs, Reactjs, Angularjs, VueJs, etc. Our team of web developers is talented in their domain platforms. Our work is always precise and user-oriented.</p>
+                    <p>Communication is a big concern for remote work keep in mind we always focus on great communication throughout the work cycle and provide complete maintenance and support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--About Banner Section [End]-->
+
+    <!--Mastered Section [Start]-->
+    <section>
+        <div class="container">
+            <div class="w-20 h-1 bg-giopio-orange mb-4"></div>
+            <h2 class="text-giopio-black giopio-title-size font-bold mb-2">We Are <span class="inline-block text-giopio-orange">Mastered</span> On These Fields</h2>
+        </div>
+        <div class="mt-14">
+            <img src="assets/images/master-section.jpg" class="w-full" alt="">
+        </div>
+    </section>
+    <!--Mastered Section [Start]-->
+
+
+    <!--About Banner Section [Start]-->
+    <section class="relative section-big-padding lg:p-0">
+        <div class="container">
+            <div class="flex flex-col-reverse lg:flex-row lg:py-24 lg:mx-36 lg:items-center">
+                <div class="text-giopio-text text-sm 2xl:text-base lg:pr-14 lg:about-banner-text font-medium leading-relaxed">
+                    <p class="mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                </div>
+                <div class="mb-10 md:mb-16 lg:mb-0 lg:banner-title-box lg:mission-title-box">
+                    <div class="lg:hidden w-20 h-1 bg-giopio-orange mb-4"></div>
+                    <h1 class="text-giopio-black giopio-title-size font-bold lg:banner-title lg:mission-title">Mission & Vision</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--About Banner Section [End]-->
+
+    <section>
+        <div class="container">
+            <h2 class="giopio-title-size font-bold text-giopio-black">Why Not Reading Our Profile Pdf?<br> Download & Read Our Company Profile Now.</h2>
+            <div class="text-center mt-16">
+                <button class="giopio-btn font-semibold text-sm 2xl:text-base px-5 md:px-14 py-4 2xl:px-16 2xl:py-5 hover:bg-giopio-black w-full md:w-auto">Download Our Company Profile</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Our Teams Section [Start]-->
+    <section class="section-big-padding relative z-10 mb-24">
+        <div class="absolute left-0 right-0 bottom-0 h-3/5 -z-10" style="background-color: #FEF8F3;"></div>
+        <div class="container">
+            <div class="mb-16 2xl:mb-20">
+                <div class="w-20 h-1 bg-giopio-orange mb-2"></div>
+                <h2 class="text-giopio-black giopio-title-size font-bold mb-4">Meet Our <span class="inline-block text-giopio-orange">Team</span></h2>
+            </div>
+            <div class="flex flex-wrap justify-center gap-12 xl:max-w-75xl mx-auto">
+                <div class="basis-full md:basis-2/5 lg:basis-1/4 mb-14 team-member z-10 relative group">
+                    <div class="member-photo h-full">
+                        <img class="rounded-20 h-full w-full object-cover" src="assets/images/team-1.jpg" alt="">
+                    </div>
+                    <div class="member-info">
+                        <a href="#" class="text-base font-semibold text-giopio-black mb-1 inline-block duration-500 group-hover:text-white">Traver Borris</a>
+                        <div class="text-sm font-medium text-giopio-text duration-500 group-hover:text-white">CEO, Founder</div>
+                        <div class="flex gap-5 justify-center -mt-6 duration-500 opacity-0 text-white group-hover:opacity-100 group-hover:mt-6">
+                            <a href="#" target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#" target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="basis-full md:basis-2/5 lg:basis-1/4 mb-14 team-member z-10 relative group">
+                    <div class="member-photo h-full">
+                        <img class="rounded-20 h-full w-full object-cover" src="assets/images/team-2.jpg" alt="">
+                    </div>
+                    <div class="member-info">
+                        <a href="#" class="text-base font-semibold text-giopio-black mb-1 inline-block duration-500 group-hover:text-white">John Smith</a>
+                        <div class="text-sm font-medium text-giopio-text duration-500 group-hover:text-white">Full-Stack Web Developer</div>
+                        <div class="flex gap-5 justify-center -mt-6 duration-500 opacity-0 text-white group-hover:opacity-100 group-hover:mt-6">
+                            <a href="#" target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#" target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="basis-full md:basis-2/5 lg:basis-1/4 mb-14 team-member z-10 relative group">
+                    <div class="member-photo h-full">
+                        <img class="rounded-20 w-full h-full object-cover" src="assets/images/team-3.jpg" alt="">
+                    </div>
+                    <div class="member-info">
+                        <a href="#" class="text-base font-semibold text-giopio-black mb-1 inline-block duration-500 group-hover:text-white">Jhon Doe</a>
+                        <div class="text-sm font-medium text-giopio-text duration-500 group-hover:text-white">Director, Arts & Design</div>
+                        <div class="flex gap-5 justify-center -mt-6 duration-500 opacity-0 text-white group-hover:opacity-100 group-hover:mt-6">
+                            <a href="#" target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#" target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="basis-full md:basis-2/5 lg:basis-1/4 mb-14 team-member z-10 relative group">
+                    <div class="member-photo h-full">
+                        <img class="rounded-20 h-full w-full object-cover" src="assets/images/team-1.jpg" alt="">
+                    </div>
+                    <div class="member-info">
+                        <a href="#" class="text-base font-semibold text-giopio-black mb-1 inline-block duration-500 group-hover:text-white">Traver Borris</a>
+                        <div class="text-sm font-medium text-giopio-text duration-500 group-hover:text-white">CEO, Founder</div>
+                        <div class="flex gap-5 justify-center -mt-6 duration-500 opacity-0 text-white group-hover:opacity-100 group-hover:mt-6">
+                            <a href="#" target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#" target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="basis-full md:basis-2/5 lg:basis-1/4 mb-14 team-member z-10 relative group">
+                    <div class="member-photo h-full">
+                        <img class="rounded-20 h-full w-full object-cover" src="assets/images/team-2.jpg" alt="">
+                    </div>
+                    <div class="member-info">
+                        <a href="#" class="text-base font-semibold text-giopio-black mb-1 inline-block duration-500 group-hover:text-white">John Smith</a>
+                        <div class="text-sm font-medium text-giopio-text duration-500 group-hover:text-white">Full-Stack Web Developer</div>
+                        <div class="flex gap-5 justify-center -mt-6 duration-500 opacity-0 text-white group-hover:opacity-100 group-hover:mt-6">
+                            <a href="#" target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#" target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="basis-full md:basis-2/5 lg:basis-1/4 mb-14 team-member z-10 relative group">
+                    <div class="member-photo h-full">
+                        <img class="rounded-20 w-full h-full object-cover" src="assets/images/team-3.jpg" alt="">
+                    </div>
+                    <div class="member-info">
+                        <a href="#" class="text-base font-semibold text-giopio-black mb-1 inline-block duration-500 group-hover:text-white">Jhon Doe</a>
+                        <div class="text-sm font-medium text-giopio-text duration-500 group-hover:text-white">Director, Arts & Design</div>
+                        <div class="flex gap-5 justify-center -mt-6 duration-500 opacity-0 text-white group-hover:opacity-100 group-hover:mt-6">
+                            <a href="#" target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#" target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Our Teams Section [End]-->
+
+
+    <!--CTA Section [Start]-->
+    <section class="relative z-10 -mb-40">
+        <div class="container">
+            <div class="md:flex xl:mx-36 bg-giopio-orange text-white rounded-xl p-10 md:p-14 2xl:p-20 items-center relative z-10">
+                <img class="-z-10 absolute left-0 top-0 h-full" src="assets/images/get-started-bg.png" alt="">
+                <div class="md:w-4/6 mb-8 md:mb-0">
+                    <h3 class="font-bold text-2xl mb-4">Let's Talk</h3>
+                    <p class="text-sm 2xl:text-base font-medium leading-7">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto possimus obcaecati corrupti sint repudiandae quis repellendus odio voluptate consequatur architecto dolore provident nostrum, reiciendis magnam laboriosam officiis optio facere ipsum?</p>
+                </div>
+                <div class="md:w-1/3 md:flex justify-end">
+                    <a href="#" class="giopio-btn-white text-sm 2xl:text-base font-medium hover:bg-giopio-black hover:text-white">Start A Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--CTA Section [End]-->
+
+    <!--Footer Section [Start]-->
+    <footer class="bg-giopio-black pt-64 pb-12 2xl:pb-16">
+        <div class="container">
+            <div class="md:flex mb-14 2xl:mb-20">
+                <div class="mb-14 md:mb-0 flex-1 text-white text-sm 2xl:text-base font-medium">
+                    <a href="index.html" class="mb-8 inline-block"><img src="assets/images/logo-white.png" alt="GioPio"></a>
+                    <p class="mb-6 md:w-2/3 leading-7">Grow your business with Giopio. Lorem ipsum dolor sit amet, vel accumsan liberavisse ex, a elaboraret interpretaris, sed His nibh scripta in. In sea vocibus facilisis.</p>
+                    <p>129/6, New Boston, USA</p>
+                </div>
+                <div class="md:flex flex-2 xl:flex-1 text-white text-sm 2xl:text-base font-medium">
+                    <div class="mb-14 md:mb-0 mr-24">
+                        <h5 class="text-sm 2xl:text-base mb-7 font-semibold">Pages</h5>
+                        <ul>
+                            <li class="mb-4"><a href="index.html" class="duration-300 hover:text-giopio-orange">Home</a></li>
+                            <li class="mb-4"><a href="project.html" class="duration-300 hover:text-giopio-orange">Project</a></li>
+                            <li class="mb-4"><a href="about-us.html" class="duration-300 hover:text-giopio-orange">About</a></li>
+                            <li class="mb-4"><a href="index.html#contact-us" class="duration-300 hover:text-giopio-orange">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="mb-14 md:mb-0 mr-24">
+                        <h5 class="text-sm 2xl:text-base mb-7 font-semibold">Support</h5>
+                        <ul>
+                            <li class="mb-4"><a href="#" class="duration-300 hover:text-giopio-orange">Terms & Policy</a></li>
+                            <li class="mb-4"><a href="#" class="duration-300 hover:text-giopio-orange">24/7 Support</a></li>
+                            <li class="mb-4"><a href="#" class="duration-300 hover:text-giopio-orange">Easy Payments</a></li>
+                            <li class="mb-4"><a href="#" class="duration-300 hover:text-giopio-orange">Security</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="text-sm 2xl:text-base mb-7 font-semibold">Contact</h5>
+                        <div class="flex gap-5 duration-500 text-white mb-14">
+                            <a href="#" target="_blank" class="duration-300 hover:text-giopio-orange"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" target="_blank" class="duration-300 hover:text-giopio-orange"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#" target="_blank" class="duration-300 hover:text-giopio-orange"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                        <ul>
+                            <li class="mb-4"><a href="#" class="duration-300 hover:text-giopio-orange"><i class="fa-solid fa-phone mr-3"></i>+1 555 423 213</a></li>
+                            <li class="mb-4"><a href="#" class="duration-300 hover:text-giopio-orange"><i class="fa-solid fa-envelope mr-3"></i>support@giopio.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="text-white text-center text-sm md:text-base 2xl:text-lg font-medium">&copy; 2022<span class=" inline-block w-1 h-1 rounded-full bg-white relative -top-1 mx-2"></span><a href="index.html" class="duration-300 hover:text-giopio-orange">Giopio</a>. All rights reserved</div>
+        </div>
+    </footer>
+    <!--Footer Section [End]-->
+    <!--Modal Section [Start]-->
+    <div class="giopio-modal-backdrop fixed inset-0 opacity-0 invisible duration-500"></div>
+    <div class="giopio-modal fixed w-full left-2/4 top-2/4 bg-white px-4 py-5 md:px-16 lg:px-36 md:py-16 -translate-x-2/4 -translate-y-2/4 opacity-0 invisible duration-500 h-screen md:h-auto overflow-y-auto">
+        <span id="giopioModalClose" class="close-modal w-8 h-8 absolute right-3 text-xl top-6 cursor-pointer duration-300 hover:text-giopio-orange"><i class="fa-solid fa-xmark"></i></span>
+        <div class="mb-10">
+            <h2 class="contact-title text-giopio-black font-bold mb-4">Have An Idea? Just Leave A Message!</h2>
+            <p class="text-giopio-text font-medium text-sm 2xl:text-base">We are bound to give life to your dream project. Our support team will get back to in 12-h during standard business hours.</p>
+        </div>
+        <div class="w-full">
+            <div class="md:columns-2 gap-7 mb-7">
+                <div class="mb-6 md:mb-0">
+                    <input type="text" class="giopio-form-control form-control-style-white" placeholder="Your name">
+                </div>
+                <div class="mb-6 md:mb-0">
+                    <input type="email" class="giopio-form-control form-control-style-white" placeholder="Your email">
+                </div>
+            </div>
+            <div class="mb-6">
+                <input type="text" class="giopio-form-control form-control-style-white" placeholder="Subject">
+            </div>
+            <div class="mb-6">
+                <textarea name="" id="" cols="30" rows="4" class="giopio-form-control h-auto form-control-style-white" placeholder="Your message"></textarea>
+            </div>
+            <button type="submit" class="giopio-btn font-medium text-base w-full hover:bg-giopio-black hover:text-white">Send Message</button>
+        </div>
+    </div>
+    <!--Modal Section [End]-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
