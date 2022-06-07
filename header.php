@@ -116,33 +116,33 @@
                                                 <div>
                                                     <div class="font-medium text-sm mb-5 border-b border-b-giopio-border-2 pb-3 block lg:hidden">Recent Blog Posts</div>
                                                     <div class="mb-10">
+                                                    <?php 
+                                                        $args = array(
+                                                            'post_type'     => 'post',
+                                                            'posts_per_page'=> 3,
+                                                            'order' => 'DESC',
+                                                        );
+                                                        $blogQry = new WP_Query($args);
+                                                        if($blogQry->have_posts()) : while($blogQry->have_posts()) : $blogQry->the_post();
+                                                        
+                                                    ?>
+
                                                         <div class="md:flex gap-4 items-center mb-10 md:mb-7">
                                                             <div class="mb-5 md:mb-0 rounded-lg overflow-hidden w-20 h-20">
                                                                 <img class="w-full h-full object-cover rounded-lg" src="<?= get_template_directory_uri()?>/assets/images/blog-1.jpg" alt="">
                                                             </div>
                                                             <div class="md:w-[calc(100%_-_5rem)]">
-                                                                <h4 class="text-sm font-semibold mb-2"><a class="text-giopio-black duration-300 hover:text-giopio-orange" href="<?= site_url('#')?>">Benefits Of Virtual Teams And It’s Challenges In 2022</a></h4>
-                                                                <a href="#" class="text-giopio-text-blue duration-300 hover:text-giopio-orange">Read More…</a>
+                                                                <h4 class="text-sm font-semibold mb-2"><a class="text-giopio-black duration-300 hover:text-giopio-orange" href="<?= site_url('#')?>"><?php the_title() ?></a></h4>
+                                                                <a href="<?php echo the_permalink(  )?>" class="text-giopio-text-blue duration-300 hover:text-giopio-orange">Read More…</a>
                                                             </div>
                                                         </div>
-                                                        <div class="md:flex gap-4 items-center mb-10 md:mb-7">
-                                                            <div class="mb-5 md:mb-0 rounded-lg overflow-hidden w-20 h-20">
-                                                                <img class="w-full h-full object-cover rounded-lg" src="<?= get_template_directory_uri()?>/assets/images/blog-1.jpg" alt="">
-                                                            </div>
-                                                            <div class="md:w-[calc(100%_-_5rem)]">
-                                                                <h4 class="text-sm font-semibold mb-2"><a class="text-giopio-black duration-300 hover:text-giopio-orange" href="<?= site_url('#')?>">Benefits Of Virtual Teams And It’s Challenges In 2022</a></h4>
-                                                                <a href="#" class="text-giopio-text-blue duration-300 hover:text-giopio-orange">Read More…</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="md:flex gap-4 items-center mb-10 md:mb-7">
-                                                            <div class="mb-5 md:mb-0 rounded-lg overflow-hidden w-20 h-20">
-                                                                <img class="w-full h-full object-cover rounded-lg" src="<?= get_template_directory_uri()?>/assets/images/blog-1.jpg" alt="">
-                                                            </div>
-                                                            <div class="md:w-[calc(100%_-_5rem)]">
-                                                                <h4 class="text-sm font-semibold mb-2"><a class="text-giopio-black duration-300 hover:text-giopio-orange" href="<?= site_url('#')?>">Benefits Of Virtual Teams And It’s Challenges In 2022</a></h4>
-                                                                <a href="#" class="text-giopio-text-blue duration-300 hover:text-giopio-orange">Read More…</a>
-                                                            </div>
-                                                        </div>
+                                                        <?php
+                                                        endwhile;
+                                                        endif;
+                                                        wp_reset_postdata();
+                                                    ?>
+
+                                                        
                                                     </div>
                                                     <a href="<?= site_url('blog')?>" class="font-semibold text-giopio-orange text-base duration-300 hover:text-giopio-black">Read All Blogs<i class="fa-solid fa-arrow-right-long ml-3"></i></a>
                                                 </div>

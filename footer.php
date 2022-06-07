@@ -19,7 +19,9 @@
                 <img class="-z-10 absolute left-0 top-0 h-full" src="<?= get_template_directory_uri()?>/assets/images/get-started-bg.png" alt="">
                 <div class="md:w-4/6 mb-8 md:mb-0">
                     <h3 class="font-bold text-2xl mb-4">Let's Talk</h3>
-                    <p class="text-sm 2xl:text-base font-medium leading-7">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto possimus obcaecati corrupti sint repudiandae quis repellendus odio voluptate consequatur architecto dolore provident nostrum, reiciendis magnam laboriosam officiis optio facere ipsum?</p>
+                    <p class="text-sm 2xl:text-base font-medium leading-7">
+                    Giopio is a professional web application services provider that specializes in delivering fully managed solutions based on PHP, Laravel, and so on. We deliver end-to-end web application development, Quality assurance, and support solutions. giopio teams are passionate about transparency, reliability, trust, and outstanding customer care – we aren’t happy with our creation until you are.
+                    </p>
                 </div>
                 <div class="md:w-1/3 md:flex justify-end">
                     <a href="#" class="giopio-btn-white text-sm 2xl:text-base font-medium hover:bg-giopio-black hover:text-white">Start A Project</a>
@@ -35,17 +37,19 @@
             <div class="md:flex mb-14 2xl:mb-20">
                 <div class="mb-14 md:mb-0 flex-1 text-white text-sm 2xl:text-base font-medium">
                     <a href="index.html" class="mb-8 inline-block"><img src="<?= get_template_directory_uri()?>/assets/images/logo-white.png" alt="GioPio"></a>
-                    <p class="mb-6 md:w-2/3 leading-7">Grow your business with Giopio. Lorem ipsum dolor sit amet, vel accumsan liberavisse ex, a elaboraret interpretaris, sed His nibh scripta in. In sea vocibus facilisis.</p>
-                    <p>129/6, New Boston, USA</p>
+                    <p class="mb-6 md:w-2/3 leading-7">
+                    Giopio has completed over two Hundred big projects for local clients in Bangladesh. Most of the customers are SaaS companies, dynamic startups, and educational institutions.
+                    </p>
+                    <p>Maloti nagor, Bogura, Bangladesh</p>
                 </div>
                 <div class="md:flex flex-2 xl:flex-1 text-white text-sm 2xl:text-base font-medium">
                     <div class="mb-14 md:mb-0 mr-24">
                         <h5 class="text-sm 2xl:text-base mb-7 font-semibold">Pages</h5>
                         <ul>
-                            <li class="mb-4"><a href="index.html" class="duration-300 hover:text-giopio-orange">Home</a></li>
-                            <li class="mb-4"><a href="project.html" class="duration-300 hover:text-giopio-orange">Project</a></li>
-                            <li class="mb-4"><a href="about-us.html" class="duration-300 hover:text-giopio-orange">About</a></li>
-                            <li class="mb-4"><a href="index.html#contact-us" class="duration-300 hover:text-giopio-orange">Contact</a></li>
+                            <li class="mb-4"><a href="<?= site_url()?>" class="duration-300 hover:text-giopio-orange">Home</a></li>
+                            <li class="mb-4"><a href="<?= site_url('projects')?>" class="duration-300 hover:text-giopio-orange">Project</a></li>
+                            <li class="mb-4"><a href="<?= site_url('about-us')?>" class="duration-300 hover:text-giopio-orange">About</a></li>
+                            <li class="mb-4"><a href="<?= site_url('#contact')?>" class="duration-300 hover:text-giopio-orange">Contact</a></li>
                         </ul>
                     </div>
                     <div class="mb-14 md:mb-0 mr-24">
@@ -60,13 +64,14 @@
                     <div>
                         <h5 class="text-sm 2xl:text-base mb-7 font-semibold">Contact</h5>
                         <div class="flex gap-5 duration-500 text-white mb-14">
-                            <a href="#" target="_blank" class="duration-300 hover:text-giopio-orange"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" target="_blank" class="duration-300 hover:text-giopio-orange"><i class="fa-brands fa-twitter"></i></a>
-                            <a href="#" target="_blank" class="duration-300 hover:text-giopio-orange"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://facebook.com/giopiocom" target="_blank" class="duration-300 hover:text-giopio-orange"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/jkareaparvez" target="_blank" class="duration-300 hover:text-giopio-orange"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/jakarea98/" target="_blank" class="duration-300 hover:text-giopio-orange"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/jakarea98/" target="_blank" class="duration-300 hover:text-giopio-orange"><i class="fa-brands fa-linkedin-in"></i></a>
                         </div>
                         <ul>
-                            <li class="mb-4"><a href="#" class="duration-300 hover:text-giopio-orange"><i class="fa-solid fa-phone mr-3"></i>+1 555 423 213</a></li>
-                            <li class="mb-4"><a href="#" class="duration-300 hover:text-giopio-orange"><i class="fa-solid fa-envelope mr-3"></i>support@giopio.com</a></li>
+                            <li class="mb-4"><a href="https://web.whatsapp.com/send?phone=8801728247398&text=Hi%20jakarea!%0D%0AI%20am%20interested%20to%20work%20with%20you." class="duration-300 hover:text-giopio-orange"><i class="fa-solid fa-phone mr-3"></i>+8801728247398</a></li>
+                            <li class="mb-4"><a href="mailto:giopioservice@gmail.com" class="duration-300 hover:text-giopio-orange"><i class="fa-solid fa-envelope mr-3"></i>giopioservice@gmail.com</a></li>
                         </ul>
                     </div>
                 </div>
@@ -116,8 +121,6 @@
             "autoplayButtonOutput": false,
             "controlsText": ['<i class="fa-solid fa-arrow-left"></i>', '<i class="fa-solid fa-arrow-right"></i>']
         });
-    </script>
-    <script>
         var slider = tns({
             container: '#serviceSlider',
             "speed": 200,

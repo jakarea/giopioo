@@ -45,7 +45,9 @@ function giopioo_setup() {
 		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		*/
 	add_theme_support( 'post-thumbnails' );
-
+	add_image_size( 'blog-v-image', 304, 203 );
+	add_image_size( 'blog-h-image', 224, 224 );
+	
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
@@ -183,3 +185,4 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 
 require 'functions/functions.php';
+require 'functions/helper.php';

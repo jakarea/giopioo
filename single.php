@@ -13,27 +13,42 @@ get_header();
 <!--Banner Section [Start]-->
 <section class="pt-20 pb-24 relative z-10 mb-24 mt-28">
 	<div class="container">
+	<?php 
+                $args = array(
+                    'post_type'     => 'post',
+                    'posts_per_page'=> 1,
+                    'orderby' => 'rand',
+                );
+                $blogQry = new WP_Query($args);
+                if($blogQry->have_posts()) : while($blogQry->have_posts()) : $blogQry->the_post();
+            ?>
+
 		<div class="flex flex-col-reverse lg:flex-row lg:items-center">
 			<div class="lg:w-1/2 lg:pr-20 pt-10">
-				<h1 class="text-giopio-black giopio-title-size font-bold mb-10">How This Non-Profit Agency <span class="inline-block text-giopio-orange">Raised $1M</span> Within 6 Months</h1>
-				<p class="mb-10 text-sm md:text-base 2xl:text-lg text-giopio-text leading-7 font-medium">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusan tium doloremque laudanum, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.</p>
+				<h1 class="text-giopio-black giopio-title-size font-bold mb-10"><a href="<?php echo get_permalink() ?>"><?php the_title() ?></a></h1>
+				<p class="mb-10 text-sm md:text-base 2xl:text-lg text-giopio-text leading-7 font-medium"><?php the_excerpt()?></p>
 				<div class="text-sm text-giopio-text font-medium flex items-center gap-3 mb-10">
 					<img src="https://via.placeholder.com/60" class="rounded-full" alt="">
 					<div>
-						<a href="#" class="text-base font-semibold text-giopio-text block mb-1 duration-300 hover:text-giopio-orange">Travor Borris</a>
+						<a href="#" class="text-base font-semibold text-giopio-text block mb-1 duration-300 hover:text-giopio-orange"><?php echo get_the_author_meta('nickname')?></a>
 						<div class="md:flex items-center gap-3 text-giopio-text text-sm font-medium">
-							<a href="#" class="block duration-300 hover:text-giopio-orange my-2 md:my-0">September 29, 2019</a>
+							<a href="#" class="block duration-300 hover:text-giopio-orange my-2 md:my-0"><?php echo get_the_date() ?></a>
 							<span class="hidden md:inline-block w-1 h-1 bg-giopio-text rounded-full"></span>
-							<span class="block">4 min read</span>
+							<span class="block"><?php do_action('show_reading_time', get_the_content() )?> read</span>
 						</div>
 					</div>
 				</div>
 				<a href="#" class="text-sm 2xl:text-base font-semibold rounded-full bg-white border border-giopio-orange text-giopio-text px-8 py-3 inline-block duration-300 hover:bg-giopio-orange hover:text-white">Business</a>
 			</div>
 			<div class="lg:w-1/2 flex justify-end">
-				<img src="<?php echo get_template_directory_uri()?>/assets/images/blog-banner.jpg" class="w-full lg:w-auto max-w-full xl:blog-banner rounded-md" alt="">
+				<?php the_post_thumbnail( "post-thumbnails", 'class="w-full lg:w-auto max-w-full xl:blog-banner rounded-md"' ); ?>
 			</div>
 		</div>
+		<?php
+                endwhile;
+                endif;
+                wp_reset_postdata();
+            ?>
 	</div>
 	<div class="w-2/3 h-full bg-giopio-gray-bg absolute left-0 top-0 bottom-0 -z-10"></div>
 </section>
