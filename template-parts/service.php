@@ -41,12 +41,12 @@
                     <a href="#" class="service-box">
                         <div class="mb-12 h-12"><img class="max-h-12" src="<?= get_template_directory_uri()?>/assets/images/laravel-application-development.png" alt="Facebook App Development"></div>
                         <h4 class="service-title">Laravel Application Development</h4>
-                        <p class="text-sm font-medium text-giopio-text leading-7">Lorem ipsum dolor sit amet, conse tetur adipiscing elit, sed do eiusm tempor incididunt ut labore et dolor magna aliqua. Sed do eiusmod tempor.</p>
+                        <p class="text-sm font-medium text-giopio-text leading-7">Web applications using the Laravel framework will be more stable, scalable, and secure. We build tailor-made web solutions that are good strategists for our customers.</p>
                     </a>
                     <a href="#" class="service-box">
                         <div class="mb-12 h-12"><img class="max-h-12" src="<?= get_template_directory_uri()?>/assets/images/web-design-development.png" alt="react App Development"></div>
                         <h4 class="service-title">React Application Development</h4>
-                        <p class="text-sm font-medium text-giopio-text leading-7">Lorem ipsum dolor sit amet, conse tetur adipiscing elit, sed do eiusm tempor incididunt ut labore et dolor magna aliqua. Sed do eiusmod tempor.</p>
+                        <p class="text-sm font-medium text-giopio-text leading-7">Today's Business, Whether it is web or mobile development, it requires a singular focus with relentless efforts to make it near perfect. ReactJS is a JavaScript framework that makes it easier.</p>
                     </a>
                     <a href="#" class="service-box ">
                         <div class="mb-12 h-12"><img class="max-h-12" src="<?= get_template_directory_uri()?>/assets/images/facebook-app-development.png" alt="Facebook App Development"></div>

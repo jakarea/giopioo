@@ -51,9 +51,9 @@ get_header();
         <div class="container">
             <div class="flex flex-col-reverse lg:flex-row lg:py-24 lg:mx-36 lg:items-center">
                 <div class="text-giopio-text text-sm 2xl:text-base lg:pr-14 lg:about-banner-text font-medium leading-relaxed">
-                    <p class="mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                </div>
+                    <p class="mb-8">Giopio is come up with Web & Mobile applications besides other IT services based on the client's requirements. As a SAAS and Web Development company, we are always working on innovative and user-centric solutions as per customer needs.</p>
+                    <p>In the IT field, we have a particularly strong presence specially in the SAAS product and our web solutions have been used by major international brands on the website. To Commit ourselves to becoming increasingly advanced in technology and domain expertise to deliver strategic, simple, and cost-efficient solutions to our clients.</p>
+                                    </div>
                 <div class="mb-10 md:mb-16 lg:mb-0 lg:banner-title-box lg:mission-title-box">
                     <div class="lg:hidden w-20 h-1 bg-giopio-orange mb-4"></div>
                     <h1 class="text-giopio-black giopio-title-size font-bold lg:banner-title lg:mission-title">Mission & Vision</h1>
