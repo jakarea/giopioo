@@ -21,76 +21,43 @@
                 <div class="lg:w-4/6 text-giopio-black">
                     <div x-data="{selected:3}">
                         <ul class="text-sm font-medium">
-                            <li class="relative border mb-4 rounded-xl duration-700" x-bind:class="selected == 1 ? 'border-giopio-orange active-accordion-bg' : 'border-giopio-border-2'">
-                                <button type="button" class="w-full px-6 py-6 text-left" @click="selected !== 1 ? selected = 1 : selected = null">
+                        <?php 
+                            $args = array(
+                                'post_type'     => 'faq',
+                                'posts_per_page'=> 12
+                            );
+                            $blogQry = new WP_Query($args);
+                            $selected = 1;
+                            if($blogQry->have_posts()) : while($blogQry->have_posts()) : $blogQry->the_post();
+                
+                        ?>
+                            <li class="relative border mb-4 rounded-xl duration-700" x-bind:class="selected == <?=$selected ?> ? 'border-giopio-orange active-accordion-bg' : 'border-giopio-border-2'">
+                                <button type="button" class="w-full px-6 py-6 text-left" @click="selected !== <?=$selected ?> ? selected = <?=$selected ?> : selected = null">
                                     <div class="flex items-center justify-between">
-                                        <span class="font-medium text-sm 2xl:text-base">Lorem ipsum dolor sit metLorem ipsum dolor sit met?</span>
-                                        <i class="fa-solid text-giopio-text text-xs" x-bind:class="selected == 1 ? 'fa-angle-up' : 'fa-angle-down'"></i>
+                                        <span class="font-medium text-sm 2xl:text-base"><?php the_title() ?></span>
+                                        <i class="fa-solid text-giopio-text text-xs" x-bind:class="selected == <?=$selected ?> ? 'fa-angle-up' : 'fa-angle-down'"></i>
                                     </div>
                                 </button>
-                                <div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                                <div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="container1" x-bind:style="selected == <?=$selected ?> ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
                                     <div class="px-6 pb-6 text-giopio-text">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor.</p>
+                                    <?php the_excerpt() ?>
                                     </div>
                                 </div>
                             </li>
-                            <li class="relative border mb-4 rounded-xl duration-700" x-bind:class="selected == 2 ? 'border-giopio-orange active-accordion-bg' : 'border-giopio-border-2'">
-                                <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 2 ? selected = 2 : selected = null">
-                                    <div class="flex items-center justify-between">
-                                        <span class="font-medium text-sm 2xl:text-base">Lorem ipsum dolor sit amet?</span>
-                                        <i class="fa-solid text-giopio-text text-xs" x-bind:class="selected == 2 ? 'fa-angle-up' : 'fa-angle-down'"></i>
-                                    </div>
-                                </button>
-                                <div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="container2" x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''">
-                                    <div class="px-6 pb-6 text-giopio-text">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="relative border mb-4 rounded-xl duration-700" x-bind:class="selected == 3 ? 'border-giopio-orange active-accordion-bg' : 'border-giopio-border-2'">
-                                <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 3 ? selected = 3 : selected = null">
-                                    <div class="flex items-center justify-between">
-                                        <span class="font-medium text-sm 2xl:text-base">Lorem ipsum dolor sit metLorem ipsum dolor sit met?</span>
-                                        <i class="fa-solid text-giopio-text text-xs" x-bind:class="selected == 3 ? 'fa-angle-up' : 'fa-angle-down'"></i>
-                                    </div>
-                                </button>
-                                <div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="container2" x-bind:style="selected == 3 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''">
-                                    <div class="px-6 pb-6 text-giopio-text">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="relative border mb-4 rounded-xl duration-700" x-bind:class="selected == 4 ? 'border-giopio-orange active-accordion-bg' : 'border-giopio-border-2'">
-                                <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 4 ? selected = 4 : selected = null">
-                                    <div class="flex items-center justify-between">
-                                        <span class="font-medium text-sm 2xl:text-base">Lorem ipsum dolor sit metLorem ipsum dolor sit met?</span>
-                                        <i class="fa-solid text-giopio-text text-xs" x-bind:class="selected == 4 ? 'fa-angle-up' : 'fa-angle-down'"></i>
-                                    </div>
-                                </button>
-                                <div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="container2" x-bind:style="selected == 4 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''">
-                                    <div class="px-6 pb-6 text-giopio-text">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="relative border mb-4 rounded-xl duration-700" x-bind:class="selected == 5 ? 'border-giopio-orange active-accordion-bg' : 'border-giopio-border-2'">
-                                <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 5 ? selected = 5 : selected = null">
-                                    <div class="flex items-center justify-between">
-                                        <span class="font-medium text-sm 2xl:text-base">Lorem ipsum dolor sit amet?</span>
-                                        <i class="fa-solid text-giopio-text text-xs" x-bind:class="selected == 5 ? 'fa-angle-up' : 'fa-angle-down'"></i>
-                                    </div>
-                                </button>
-                                <div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="container2" x-bind:style="selected == 5 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''">
-                                    <div class="px-6 pb-6 text-giopio-text">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor.</p>
-                                    </div>
-                                </div>
-                            </li>
+
+                            <?php
+                            $selected++;
+                    endwhile;
+                    endif;
+                    
+                    wp_reset_postdata();
+                ?>
+            
                         </ul>
                     </div>
-                    <div class="text-center mt-14">
+                    <!-- <div class="text-center mt-14">
                         <a href="#" class="inline-block text-base text-giopio-orange font-medium duration-300 hover:text-giopio-black">20 More Questions</a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

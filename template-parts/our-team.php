@@ -18,48 +18,84 @@
             <h2 class="text-giopio-black giopio-title-size font-bold mb-0">Meet Our <span class="inline-block text-giopio-orange">Team</span></h2>
         </div>
         <div class="flex flex-wrap justify-center gap-12 xl:max-w-75xl mx-auto">
-            <div class="basis-full md:basis-2/5 lg:basis-1/4 mb-14 lg:mb-0 team-member z-10 relative group">
-                <div class="member-photo h-full">
-                    <img class="rounded-20 h-full w-full object-cover" src="<?= get_template_directory_uri()?>/assets/images/team-1.jpg" alt="">
-                </div>
+            
+        <?php 
+                $args = array(
+                    'post_type'     => 'team',
+                    'posts_per_page'=> 3
+                );
+                $blogQry = new WP_Query($args);
+                if($blogQry->have_posts()) : while($blogQry->have_posts()) : $blogQry->the_post();
+                
+            ?>
+        <div class="basis-full md:basis-2/5 lg:basis-1/4 mb-14 lg:mb-0 team-member z-10 relative group">
+                <?php 
+                    if (has_post_thumbnail() ) :     
+                        ?>
+                        <div class="member-photo h-full">
+                        <?php the_post_thumbnail( "team-image", 'class=rounded-20 h-full w-full object-cover' ); ?>
+                        </div>
+                <?php endif ?>
+
                 <div class="member-info">
-                    <a href="#" class="text-base font-semibold text-giopio-black mb-1 inline-block duration-500 group-hover:text-white">Traver Borris</a>
-                    <div class="text-sm font-medium text-giopio-text duration-500 group-hover:text-white">CEO, Founder</div>
+                    <a href="#" class="text-base font-semibold text-giopio-black mb-1 inline-block duration-500 group-hover:text-white"><?php the_title()?></a>
+                    <div class="text-sm font-medium text-giopio-text duration-500 group-hover:text-white"><?= get_post_meta($post->ID, 'designation', true) ?></div>
                     <div class="flex gap-5 justify-center -mt-6 duration-500 opacity-0 text-white group-hover:opacity-100 group-hover:mt-6">
-                        <a href="#" target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#" target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <?php 
+                            $facebook =  get_post_meta($post->ID,'facebook', true);
+                            $twitter =  get_post_meta($post->ID,'twitter', true);
+                            $linkedin =  get_post_meta($post->ID,'linkedin', true);
+                            $instagram =  get_post_meta($post->ID,'instagram', true);
+                            $github =  get_post_meta($post->ID,'github', true);
+                            $stackoverflow =  get_post_meta($post->ID,'stackoverflow', true);
+                            $youtube =  get_post_meta($post->ID,'youtube', true);
+                        ?>
+                        <?php
+                            if($facebook){?>
+                                <a href="<?= $facebook; ?> " target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-facebook-f"></i></a>
+                        <?php } ?>
+
+                        <?php
+                            if($twitter) {?>
+                                <a href="<?= $twitter ?> " target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-twitter"></i></a>
+                        <?php } ?>
+
+                        <?php
+                            if($linkedin){?>
+                                <a href="<?= $linkedin; ?> " target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <?php } ?>
+
+                        <?php
+                            if($instagram){?>
+                                <a href="<?= $instagram; ?> " target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-instagram"></i></a>
+                        <?php } ?>
+                        
+                        <?php
+                            if($github){?>
+                                <a href="<?= $github; ?> " target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-github"></i></a>
+                        <?php } ?>
+                        
+                        <?php
+                            if($stackoverflow){?>
+                                <a href="<?= $stackoverflow; ?> " target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-stack-overflow"></i></a>
+                        <?php } ?>
+
+                        <?php
+                            if($youtube){?>
+                                <a href="<?= $youtube; ?> " target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-youtube"></i></a>
+                        <?php } ?>
+                        
+                        
                     </div>
                 </div>
             </div>
-            <div class="basis-full md:basis-2/5 lg:basis-1/4 mb-14 lg:mb-0 team-member z-10 relative group">
-                <div class="member-photo h-full">
-                    <img class="rounded-20 h-full w-full object-cover" src="<?= get_template_directory_uri()?>/assets/images/team-2.jpg" alt="">
-                </div>
-                <div class="member-info">
-                    <a href="#" class="text-base font-semibold text-giopio-black mb-1 inline-block duration-500 group-hover:text-white">John Smith</a>
-                    <div class="text-sm font-medium text-giopio-text duration-500 group-hover:text-white">Full-Stack Web Developer</div>
-                    <div class="flex gap-5 justify-center -mt-6 duration-500 opacity-0 text-white group-hover:opacity-100 group-hover:mt-6">
-                        <a href="#" target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#" target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="basis-full md:basis-2/5 lg:basis-1/4 mb-14 lg:mb-0 team-member z-10 relative group">
-                <div class="member-photo h-full">
-                    <img class="rounded-20 w-full h-full object-cover" src="<?= get_template_directory_uri()?>/assets/images/team-3.jpg" alt="">
-                </div>
-                <div class="member-info">
-                    <a href="#" class="text-base font-semibold text-giopio-black mb-1 inline-block duration-500 group-hover:text-white">Jhon Doe</a>
-                    <div class="text-sm font-medium text-giopio-text duration-500 group-hover:text-white">Director, Arts & Design</div>
-                    <div class="flex gap-5 justify-center -mt-6 duration-500 opacity-0 text-white group-hover:opacity-100 group-hover:mt-6">
-                        <a href="#" target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#" target="_blank" class="duration-300 hover:text-giopio-black"><i class="fa-brands fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
+
+            <?php
+                    endwhile;
+                    endif;
+                    wp_reset_postdata();
+                ?>
+            
         </div>
     </div>
     <div class="text-center pt-28">

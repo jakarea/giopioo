@@ -15,3 +15,19 @@ function eleblikli_reading_time($param){
     }
     _e($reading_time);
 }
+
+
+add_action('get_red_text','eleblikli_red_text');
+
+function eleblikli_red_text($params){
+    _e(str_replace($params[1],"<span class='text-giopio-orange'>".$params[1]."</span>",$params[0]));
+}
+
+
+add_action('get_string_limit','eleblikli_string_limit');
+
+function eleblikli_string_limit($params){
+    $string = $params[0];
+    $limit = $params[1];
+    return substr($string,0, 140);
+}

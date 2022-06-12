@@ -18,54 +18,44 @@
         </div>
         <div class="mx-auto testimonial-carousel relative">
             <div id="testimonialSlider">
+            <?php 
+                $args = array(
+                    'post_type'     => 'feedback',
+                    'posts_per_page'=> 5,
+                    'order' => 'DESC',
+                );
+                $blogQry = new WP_Query($args);
+                if($blogQry->have_posts()) : while($blogQry->have_posts()) : $blogQry->the_post();
+                
+            ?>
                 <div>
                     <div class="testimonial md:flex gap-12 p-6 md:p-12 xl:mx-36 pb-28 mb-28">
+                        <?php 
+                            if (has_post_thumbnail() ) :     
+                        ?>
                         <div class="w-28 h-28 md:w-36 md:h-36">
-                            <img class="rounded-full object-cover w-28 h-28 md:w-36 md:h-36" src="<?= get_template_directory_uri()?>/assets/images/team-1.jpg" alt="Giopio Has Reduced 70% Of My Headache">
+                        <?php the_post_thumbnail( "feedback-image", 'class=rounded-full object-cover w-28 h-28 md:w-36 md:h-36' ); ?>
                         </div>
+                        <?php endif ?>
+
                         <div class="md:w-[calc(100%_-_12rem)]">
                             <i class="fa-solid fa-quote-right text-4xl md:text-6xl text-giopio-orange mb-6"></i>
-                            <h3 class="text-2xl md:testimonial-title font-bold text-giopio-black mb-4">Giopio Has <span class="text-giopio-orange">Reduced 70%</span> Of My Headache</h3>
-                            <p class="text-sm md:text-base font-medium text-giopio-text mb-6 leading-7">Lorem ipsum dolor sit amet, vel accumsan liberavisse ex, a elaboraret interpretaris, sed diceret concludaturque nasdo habemus sea ut. His nibh scripta in. In sea vocibus facilisis.</p>
+                            <h3 class="text-2xl md:testimonial-title font-bold text-giopio-black mb-4"><?php do_action('get_red_text', [get_the_title(),get_post_meta($post->ID, 'red_text', true)] )?></h3>
+                            
+                            <p class="text-sm md:text-base font-medium text-giopio-text mb-6 leading-7"<?php the_content()?></p>
                             <div>
-                                <p class="text-giopio-black text-base font-semibold mb-0">Marko Pali</p>
-                                <span class="text-giopio-text text-sm font-medium">Creative Director, Telcond Inc.</span>
+                                <p class="text-giopio-black text-base font-semibold mb-0"><?= get_post_meta($post->ID, 'name', true) ?></p>
+                                <span class="text-giopio-text text-sm font-medium"><?= get_post_meta($post->ID, 'designation', true) ?></span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <div class="testimonial md:flex gap-12 p-6 md:p-12 xl:mx-36 pb-28 mb-28">
-                        <div class="w-28 h-28 md:w-36 md:h-36">
-                            <img class="rounded-full object-cover w-28 h-28 md:w-36 md:h-36" src="<?= get_template_directory_uri()?>/assets/images/team-2.jpg" alt="Giopio Has Reduced 70% Of My Headache">
-                        </div>
-                        <div class="md:w-[calc(100%_-_12rem)]">
-                            <i class="fa-solid fa-quote-right text-4xl md:text-6xl text-giopio-orange mb-6"></i>
-                            <h3 class="text-2xl md:testimonial-title font-bold text-giopio-black mb-4">Giopio Has <span class="text-giopio-orange">Reduced 70%</span> Of My Headache</h3>
-                            <p class="text-sm md:text-base font-medium text-giopio-text mb-6 leading-7">Lorem ipsum dolor sit amet, vel accumsan liberavisse ex, a elaboraret interpretaris, sed diceret concludaturque nasdo habemus sea ut. His nibh scripta in. In sea vocibus facilisis.</p>
-                            <div>
-                                <p class="text-giopio-black text-base font-semibold mb-0">Marko Pali</p>
-                                <span class="text-giopio-text text-sm font-medium">Creative Director, Telcond Inc.</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="testimonial md:flex gap-12 p-6 md:p-12 xl:mx-36 pb-28 mb-28">
-                        <div class="w-28 h-28 md:w-36 md:h-36">
-                            <img class="rounded-full object-cover w-28 h-28 md:w-36 md:h-36" src="<?= get_template_directory_uri()?>/assets/images/team-3.jpg" alt="Giopio Has Reduced 70% Of My Headache">
-                        </div>
-                        <div class="md:w-[calc(100%_-_12rem)]">
-                            <i class="fa-solid fa-quote-right text-4xl md:text-6xl text-giopio-orange mb-6"></i>
-                            <h3 class="text-2xl md:testimonial-title font-bold text-giopio-black mb-4">Giopio Has <span class="text-giopio-orange">Reduced 70%</span> Of My Headache</h3>
-                            <p class="text-sm md:text-base font-medium text-giopio-text mb-6 leading-7">Lorem ipsum dolor sit amet, vel accumsan liberavisse ex, a elaboraret interpretaris, sed diceret concludaturque nasdo habemus sea ut. His nibh scripta in. In sea vocibus facilisis.</p>
-                            <div>
-                                <p class="text-giopio-black text-base font-semibold mb-0">Marko Pali</p>
-                                <span class="text-giopio-text text-sm font-medium">Creative Director, Telcond Inc.</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+                <?php
+                    endwhile;
+                    endif;
+                    wp_reset_postdata();
+                ?>
             </div>
         </div>
     </div>

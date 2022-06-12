@@ -47,6 +47,10 @@ function giopioo_setup() {
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'blog-v-image', 304, 203 );
 	add_image_size( 'blog-h-image', 224, 224 );
+	add_image_size( 'blog-mini-image', 216, 144 );
+	add_image_size( 'blog-middle-image', 432, 288 );
+	add_image_size( 'feedback-image', 144, 144 );
+	add_image_size( 'team-image', 312, 410 );
 	
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(

@@ -94,7 +94,7 @@ get_header();
                             if (has_post_thumbnail() ) :     
                         ?>
                         <div class="rounded-t-lg overflow-hidden">
-                        <?php the_post_thumbnail( "blog-v-image", 'class="w-full rounded-t-lg duration-300 group-hover:scale-110"' ); ?>
+                        <?php the_post_thumbnail( "blog-v-image", 'class=w-full rounded-t-lg duration-300 group-hover:scale-110' ); ?>
                         </div>
                         <?php endif ?>
                         <div class="px-5 pb-7">
