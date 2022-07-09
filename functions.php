@@ -51,6 +51,7 @@ function giopioo_setup() {
 	add_image_size( 'blog-middle-image', 432, 288 );
 	add_image_size( 'feedback-image', 144, 144 );
 	add_image_size( 'team-image', 312, 410 );
+	add_image_size( 'project-image', 500, 333 );
 	
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(

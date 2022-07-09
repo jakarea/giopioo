@@ -27,6 +27,36 @@
     <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.helper.ie8.js"></script><![endif]-->
     
 	<?php wp_head(); ?>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <meta name="google-site-verification" content="JeD_buUp32AwdGxTiOUgURQj1f6QkPr-DLrz6AeGwOY"/>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8FHKZL3GWS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-8FHKZL3GWS');
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '613087336578584');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=613087336578584&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Meta Pixel Code -->
+
 </head>
 
 
@@ -129,11 +159,11 @@
 
                                                         <div class="md:flex gap-4 items-center mb-10 md:mb-7">
                                                             <div class="mb-5 md:mb-0 rounded-lg overflow-hidden w-20 h-20">
-                                                                <img class="w-full h-full object-cover rounded-lg" src="<?= get_template_directory_uri()?>/assets/images/blog-1.jpg" alt="">
+                                                                <?php the_post_thumbnail( "blog-v-image", 'class="w-full h-full object-cover rounded-lg"' ); ?>
                                                             </div>
                                                             <div class="md:w-[calc(100%_-_5rem)]">
-                                                                <h4 class="text-sm font-semibold mb-2"><a class="text-giopio-black duration-300 hover:text-giopio-orange" href="<?= site_url('#')?>"><?php the_title() ?></a></h4>
-                                                                <a href="<?php echo the_permalink(  )?>" class="text-giopio-text-blue duration-300 hover:text-giopio-orange">Read More…</a>
+                                                                <h4 class="text-sm font-semibold mb-2"><a class="text-giopio-black duration-300 hover:text-giopio-orange" href="<?php echo get_permalink() ?>"><?php the_title() ?></a></h4>
+                                                                <a href="<?php echo the_permalink( )?>" class="text-giopio-text-blue duration-300 hover:text-giopio-orange">Read More…</a>
                                                             </div>
                                                         </div>
                                                         <?php
@@ -152,6 +182,7 @@
                                 </div>
                             </li>
                             <li><a href="<?= site_url('about-us')?>" class="giopio-navlink">About</a></li>
+                            <li><a href="<?= site_url('projects')?>" class="giopio-navlink">Projects</a></li>
                             <li><a href="<?= site_url('blog')?>" class="giopio-navlink">Blog</a></li>
                             <li><a href="<?= site_url('#contact')?>" class="giopio-navlink">Contact</a></li>
                         </ul>
