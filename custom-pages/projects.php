@@ -35,6 +35,7 @@ get_header();
         //CMB2
         $duration  = get_post_meta( get_the_ID(), '_cmb_duration', true );
         $slogan  = get_post_meta( get_the_ID(), '_cmb_slogan', true );
+        $live_link  = get_post_meta( get_the_ID(), '_cmb_live_link', true );
 
         // Taxonomy
 
@@ -87,7 +88,9 @@ get_header();
                             <?php  endforeach;?>
                         </div>
                         <?php endif; ?>
-                    <a href="#" class="giopio-btn-black text-base font-medium hover:bg-giopio-orange px-8 2xl:px-10">Live Demo</a>
+                        <?php if($live_link) :?>
+                            <a href="<?=live_link ?>" class="giopio-btn-black text-base font-medium hover:bg-giopio-orange px-8 2xl:px-10">Live Demo</a>
+                        <?php endif; ?>
                 </div>
             </div>
         </div>

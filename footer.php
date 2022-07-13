@@ -88,23 +88,9 @@
             <h2 class="contact-title text-giopio-black font-bold mb-4">Have An Idea? Just Leave A Message!</h2>
             <p class="text-giopio-text font-medium text-sm 2xl:text-base">We are bound to give life to your dream project. Our support team will get back to in 12-h during standard business hours.</p>
         </div>
-        <div class="w-full">
-            <div class="md:columns-2 gap-7 mb-7">
-                <div class="mb-6 md:mb-0">
-                    <input type="text" class="giopio-form-control form-control-style-white" placeholder="Your name">
-                </div>
-                <div class="mb-6 md:mb-0">
-                    <input type="email" class="giopio-form-control form-control-style-white" placeholder="Your email">
-                </div>
-            </div>
-            <div class="mb-6">
-                <input type="text" class="giopio-form-control form-control-style-white" placeholder="Subject">
-            </div>
-            <div class="mb-6">
-                <textarea name="" id="" cols="30" rows="4" class="giopio-form-control h-auto form-control-style-white" placeholder="Your message"></textarea>
-            </div>
-            <button type="submit" class="giopio-btn font-medium text-base w-full hover:bg-giopio-black hover:text-white">Send Message</button>
-        </div>
+        <?php 
+            echo do_shortcode( "[contact-form-7 id='204' title='Contact form 1']")
+        ?>
     </div>
     <!--Modal Section [End]-->
 	<?php wp_footer(); ?>

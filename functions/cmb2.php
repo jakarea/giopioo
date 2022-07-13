@@ -77,6 +77,12 @@ function cmb2_add_metabox_project_info() {
 		'type' => 'text',
 	) );
 
+	$cmb->add_field( array(
+		'name' => __( 'Live link', 'giopio' ),
+		'id' => $prefix . 'live_link',
+		'type' => 'text',
+	) );
+
 }
 
 

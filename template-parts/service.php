@@ -29,7 +29,7 @@
                         <p class="text-sm font-medium text-giopio-text leading-7">We have several years of experienced highly skilled Tech Team for you to transform your idea, just an idea into a fully developed product or service.</p>
                     </a>
                     <a href="#" class="service-box">
-                        <div class="mb-12 h-12"><img class="max-h-12" src="<?= get_template_directory_uri()?>/assets/images/wp-theme-plugin-development.png" alt="Facebook App Development"></div>
+                        <div class="mb-12 h-12"><img class="max-h-12" src="<?= get_template_directory_uri()?>/assets/images/wp-theme-plugin-development.png" alt="Wp Theme & Plugin Development"></div>
                         <h4 class="service-title">Wp Theme & Plugin Development</h4>
                         <p class="text-sm font-medium text-giopio-text leading-7">Do you want a new website? We are providing powerful digital solutions and an enjoyable user experience with our WordPress.</p>
                     </a>

@@ -7,11 +7,11 @@ function eleblikli_reading_time($param){
     
     $min = floor(str_word_count($param)  / 200); 
     if($min){
-        $reading_time .= $min .' min ' ;
+        $reading_time .= $min .' Min ' ;
     }
     $sec = floor(str_word_count($param)  % 200  /(200 /60))   ;
-    if($sec){
-        $reading_time .= $sec .' sec ' ;
+    if(!$min && $sec){
+        $reading_time .= $sec .' Sec ' ;
     }
     _e($reading_time);
 }

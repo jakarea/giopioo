@@ -40,29 +40,10 @@
         <div class="container pt-16 pb-20">
             <h2 class="contact-title text-white font-bold mb-4">Have An Idea? Just Leave A Message!</h2>
             <p class="text-white font-medium text-sm 2xl:text-base">We are bound to give life to your dream project. Our support team will get back to in 12-h during standard business hours.</p>
-            <div class="flex mt-16">
-                <div class="w-full lg:w-4/6">
-                    <div class="md:columns-3 gap-7 mb-7">
-                        <div class="mb-6 md:mb-0">
-                            <input type="text" class="giopio-form-control" placeholder="Your name">
-                        </div>
-                        <div class="mb-6 md:mb-0">
-                            <input type="email" class="giopio-form-control" placeholder="Your email">
-                        </div>
-                        <div class="mb-6 md:mb-0">
-                            <input type="text" class="giopio-form-control" placeholder="Subject">
-                        </div>
-                    </div>
-                    <div class="mb-6">
-                        <textarea name="" id="" cols="30" rows="4" class="giopio-form-control h-auto" placeholder="Your message"></textarea>
-                    </div>
-                    <div class="md:columns-3 md:gap-7">
-                        <div>
-                            <button type="submit" class="giopio-btn font-medium text-base w-full hover:bg-white hover:text-giopio-orange">Send Message</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php 
+                echo do_shortcode( "[contact-form-7 id='205' title='Contact form 1']")
+            ?>
+            
         </div>
     </section>
     <!--Message Section [End]-->

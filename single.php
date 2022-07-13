@@ -27,18 +27,24 @@ get_header();
 			<div class="lg:w-1/2 lg:pr-20 pt-10">
 				<h1 class="text-giopio-black giopio-title-size font-bold mb-10"><a href="<?php echo get_permalink() ?>"><?php the_title() ?></a></h1>
 				<p class="mb-10 text-sm md:text-base 2xl:text-lg text-giopio-text leading-7 font-medium"><?php the_excerpt()?></p>
+				<br/>
 				<div class="text-sm text-giopio-text font-medium flex items-center gap-3 mb-10">
-					<img src="https://via.placeholder.com/60" class="rounded-full" alt="">
+					<?php	$user_id = get_the_author_meta('ID');	?>
+					<img src=<?= get_avatar_url($user_id);?>" class="rounded-full" style="width: 60px"  alt="">
 					<div>
-						<a href="#" class="text-base font-semibold text-giopio-text block mb-1 duration-300 hover:text-giopio-orange"><?php echo get_the_author_meta('nickname')?></a>
+						<a href="#" class="text-base font-semibold text-giopio-text block mb-1 duration-300 hover:text-giopio-orange"><?= get_the_author_meta('display_name')?></a>
 						<div class="md:flex items-center gap-3 text-giopio-text text-sm font-medium">
 							<a href="#" class="block duration-300 hover:text-giopio-orange my-2 md:my-0"><?php echo get_the_date() ?></a>
 							<span class="hidden md:inline-block w-1 h-1 bg-giopio-text rounded-full"></span>
-							<span class="block"><?php do_action('show_reading_time', get_the_content() )?> read</span>
+							<span class="block"><?php do_action('show_reading_time', get_the_content() )?> Read</span>
 						</div>
 					</div>
 				</div>
-				<a href="#" class="text-sm 2xl:text-base font-semibold rounded-full bg-white border border-giopio-orange text-giopio-text px-8 py-3 inline-block duration-300 hover:bg-giopio-orange hover:text-white">Business</a>
+				<?php 
+					$categories = get_the_category();
+				?>
+				<a href="#" class="text-sm 2xl:text-base font-semibold rounded-full bg-white border border-giopio-orange text-giopio-text px-8 py-3 inline-block duration-300 hover:bg-giopio-orange hover:text-white"><?= $categories[0]->name ?></a>
+				
 			</div>
 			<div class="lg:w-1/2 flex justify-end">
 				<?php the_post_thumbnail( "post-thumbnails", 'class="w-full lg:w-auto max-w-full xl:blog-banner rounded-md"' ); ?>
@@ -80,7 +86,7 @@ get_header();
 			<div class="lg:w-1/4 text-giopio-text flex lg:block gap-3 mt-6 lg:mt-0">
 				<a href="#" class="w-10 h-10 rounded-full leading-10 block text-center social-icon-shadow mb-4 duration-300 hover:text-giopio-orange"><i class="fa-brands fa-twitter"></i></a>
 				<a href="#" class="w-10 h-10 rounded-full leading-10 block text-center social-icon-shadow mb-4 duration-300 hover:text-giopio-orange"><i class="fa-brands fa-linkedin-in"></i></a>
-				<a href="#" class="w-10 h-10 rounded-full leading-10 block text-center social-icon-shadow mb-4 duration-300 hover:text-giopio-orange"><i class="fa-brands fa-facebook-f"></i></a>
+				<a href="https://www.facebook.com/share.php?u=https://html.giopio.com/blog-details.html" target="_blank" class="w-10 h-10 rounded-full leading-10 block text-center social-icon-shadow mb-4 duration-300 hover:text-giopio-orange"><i class="fa-brands fa-facebook-f"></i></a>
 			</div>
 		</div>
 	</div>

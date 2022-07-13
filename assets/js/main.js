@@ -85,3 +85,15 @@ searchBtn.addEventListener('click', function(e){
     searchField.classList.toggle('hidden');
 });
 }
+
+// Add class active to nav item
+const cururl = window.location.href;                
+const urlarray = cururl.split("/");
+var page = urlarray[4]
+const links = document.getElementsByClassName('giopio-navlink');
+for(let  i = 0; i< links.length; i++){
+    if(links[i].href.includes(page)){
+        links[i].style.color = "#fb6400";
+        // links[i].classList.add('active')
+    }
+}

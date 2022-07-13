@@ -112,34 +112,34 @@
                                                         </div>
                                                         <div class="lg:md:w-[calc(100%_-_2.25rem)]">
                                                             <h4 class="text-sm font-semibold text-giopio-black mb-3 duration-300 hover:text-giopio-orange">Facebook App Development</h4>
-                                                            <p class="text-sm font-medium text-giopio-text leading-7">Lorem ipsum dolor sit amet, consectetur ut labore et dolore magna aliqua.</p>
+                                                            <p class="text-sm font-medium text-giopio-text leading-7">Bring your service or product to billion of users. Take this opportunity to connect potential customers every single day through Facebook apps.</p>
                                                         </div>
                                                     </a>
                                                     <a href="#" class="block lg:flex gap-4 mb-10 md:mb-7">
                                                         <div class="w-9 h-9 rounded border-giopio-border-2 border flex items-center p-2 mb-5 lg:mb-0">
-                                                            <img class="max-h-5 mx-auto" src="<?= get_template_directory_uri()?>/assets/images/web-design-development.png" alt="Facebook App Development">
+                                                            <img class="max-h-5 mx-auto" src="<?= get_template_directory_uri()?>/assets/images/web-design-development.png" alt="Web Design & Development">
                                                         </div>
                                                         <div class="lg:md:w-[calc(100%_-_2.25rem)]">
                                                             <h4 class=" text-sm font-semibold text-giopio-black mb-3 duration-300 hover:text-giopio-orange">Web Design & Development</h4>
-                                                            <p class="text-sm font-medium text-giopio-text leading-7">Lorem ipsum dolor sit amet, consectetur ut labore et dolore magna aliqua.</p>
+                                                            <p class="text-sm font-medium text-giopio-text leading-7">We have several years of experienced highly skilled Tech Team for you to transform your idea, just an idea into a fully developed product or service.</p>
                                                         </div>
                                                     </a>
                                                     <a href="#" class="block lg:flex gap-4 mb-10 md:mb-7">
                                                         <div class="w-9 h-9 rounded border-giopio-border-2 border flex items-center p-2 mb-5 lg:mb-0">
-                                                            <img class="max-h-5 mx-auto" src="<?= get_template_directory_uri()?>/assets/images/wp-theme-plugin-development.png" alt="Facebook App Development">
+                                                            <img class="max-h-5 mx-auto" src="<?= get_template_directory_uri()?>/assets/images/wp-theme-plugin-development.png" alt="Wordpress Theme & Plugin Development">
                                                         </div>
                                                         <div class="lg:md:w-[calc(100%_-_2.25rem)]">
                                                             <h4 class=" text-sm font-semibold text-giopio-black mb-3 duration-300 hover:text-giopio-orange">Wp Theme & Plugin Development</h4>
-                                                            <p class="text-sm font-medium text-giopio-text leading-7">Lorem ipsum dolor sit amet, consectetur ut labore et dolore magna aliqua.</p>
+                                                            <p class="text-sm font-medium text-giopio-text leading-7">Do you want a new website? We are providing powerful digital solutions and an enjoyable user experience with our WordPress.</p>
                                                         </div>
                                                     </a>
                                                     <a href="#" class="block lg:hidden 2xl:flex gap-4 mb-10 md:mb-7">
                                                         <div class="w-9 h-9 rounded border-giopio-border-2 border flex items-center p-2 mb-5 lg:mb-0">
-                                                            <img class="max-h-5 mx-auto" src="<?= get_template_directory_uri()?>/assets/images/digital-marketing.png" alt="Facebook App Development">
+                                                            <img class="max-h-5 mx-auto" src="<?= get_template_directory_uri()?>/assets/images/digital-marketing.png" alt="Digital Marketing">
                                                         </div>
                                                         <div class="lg:md:w-[calc(100%_-_2.25rem)]">
                                                             <h4 class=" text-sm font-semibold text-giopio-black mb-3">Digital Marketing</h4>
-                                                            <p class="text-sm font-medium text-giopio-text leading-7">Lorem ipsum dolor sit amet, consectetur ut labore et dolore magna aliqua.</p>
+                                                            <p class="text-sm font-medium text-giopio-text leading-7">On social media, email and other digital devices, we can provide you with innovative & cost-effective online marketing campaigns for your Business.</p>
                                                         </div>
                                                     </a>
                                                 </div>

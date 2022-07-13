@@ -11,6 +11,11 @@
 * When creating a new page
 */
 get_header();
+
+$categories = get_categories( array(
+    'orderby' => 'name',
+    'order'   => 'ASC'
+) );
 ?>
 
 
@@ -19,12 +24,11 @@ get_header();
         <div class="container">
             <div class="hidden md:flex items-center text-sm 2xl:text-base font-medium justify-between">
                 <ul class="flex gap-10 text-giopio-text">
-                    <li><a href="#" class="giopio-navlink py-2">Business</a></li>
-                    <li><a href="#" class="giopio-navlink py-2">Technology</a></li>
-                    <li><a href="#" class="giopio-navlink py-2">Productivity</a></li>
-                    <li><a href="#" class="giopio-navlink py-2">Management</a></li>
-                    <li><a href="#" class="giopio-navlink py-2">Remote</a></li>
+                    <?php foreach($categories as $category) : ?>
+                    <li><a href="#" class="giopio-navlink py-2"><?= $category->name?></a></li>
+                    <?php endforeach; ?>
                 </ul>
+
                 <div class="search">
                     <div class="text-giopio-text">
                         <i class="fa-solid fa-magnifying-glass mr-3"></i>
@@ -52,6 +56,7 @@ get_header();
                 <div class="lg:w-1/2 lg:pr-20 pt-10">
                     <h1 class="text-giopio-black giopio-title-size font-bold mb-10"><?php the_title() ?></h1>
                     <p class="mb-10 text-base 2xl:text-lg text-giopio-text leading-7 font-medium"><?php the_excerpt()?></p>
+                    <br/>
                     <div class="md:flex gap-7 items-center">
                         <a href="<?php echo get_permalink() ?>" class="giopio-btn text-sm 2xl:text-base px-10 text-center font-medium 2xl:font-semibold duration-300 hover:bg-giopio-black">Read Full Post</a>
                         <span class="mt-5 md:mt-0 block text-sm 2xl:text-base text-giopio-text font-medium">Just A <?php do_action('show_reading_time', get_the_content() )?> Read</span>
@@ -104,9 +109,10 @@ get_header();
                                     <?php
                                         $user_id = get_the_author_meta('ID');
                                     ?>
-                                    <img src="<?= get_avatar_url($user_id, 40);?>" class="rounded-full" alt=""><?php echo get_the_author_meta('nickname')?>
+                                    <img src="<?= get_avatar_url($user_id, 40);?>" class="rounded-full" style="width:40px" alt="<?php echo get_the_author_meta('nickname')?>">
+                                    <?php echo get_the_author_meta('nickname')?>
                                 </a>
-                                <span><?php do_action('show_reading_time', get_the_content() )?> read</span>
+                                <span><?php do_action('show_reading_time', get_the_content() )?> Read</span>
                             </div>
                         </div>
                     </div>
@@ -165,10 +171,10 @@ get_header();
                                 <?php
                                         $user_id = get_the_author_meta('ID');
                                     ?>
-                                    <img src="<?= get_avatar_url( $user_id ) ?>" class="rounded-full" alt="">
+                                    <img src="<?= get_avatar_url( $user_id ) ?>" class="rounded-full" style="width:40px" alt="<?php echo get_the_author_meta('nickname')?>">
                                     <?php echo get_the_author_meta('nickname')?></a>
                                 <span class=" inline-block w-1 h-1 bg-giopio-text rounded-full"></span>
-                                <span><?php do_action('show_reading_time', get_the_content() )?> read read</span>
+                                <span><?php do_action('show_reading_time', get_the_content() )?> Read</span>
                             </div>
                         </div>
                     </div>
