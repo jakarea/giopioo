@@ -18,7 +18,7 @@
                     <div class="mb-10">
                         <img class="w-36 xl:w-52" src="<?= get_template_directory_uri()?>/assets/images/banner-curve.png" alt="">
                     </div>
-                    <p class="mb-10 text-sm md:text-base 2xl:text-lg font-medium text-giopio-text leading-7">In this competitive digital world, You must have a long-lasting digital existence to bring your business globally. We are staying ahead of our competitors, And we want the same thing for you.</p>
+                    <p class="mb-10 text-sm md:text-base 2xl:text-lg font-medium text-giopio-text leading-7">We are staying ahead of our competitors, And we want the same thing for you. You must have a long-lasting digital existence to bring your business globally. We would love to help you grow online </p>
                     <a href="#" class="giopio-btn text-xs md:text-sm 2xl:text-base font-semibold md:w-96 text-center mb-5 duration-300 hover:bg-giopio-black">Start A Project - Let’s Discuss Your Idea</a>
                     <p class="md:w-96 text-sm 2xl:text-base font-medium text-giopio-text text-center relative z-10 after:after-border"><span class="inline-block bg-white px-4">No Credit Card Required.</span></p>
                     <p class="text-sm 2xl:text-base font-medium text-giopio-text mt-8">Made with<i class="fa-solid fa-heart ml-3 text-giopio-red"></i></p>

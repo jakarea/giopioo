@@ -112,7 +112,7 @@
                                                         </div>
                                                         <div class="lg:md:w-[calc(100%_-_2.25rem)]">
                                                             <h4 class="text-sm font-semibold text-giopio-black mb-3 duration-300 hover:text-giopio-orange">Facebook App Development</h4>
-                                                            <p class="text-sm font-medium text-giopio-text leading-7">Bring your service or product to billion of users. Take this opportunity to connect potential customers every single day through Facebook apps.</p>
+                                                            <p class="text-sm font-medium text-giopio-text leading-7">Facebook is offering to bring your service or product to billion of users each day. Take this opportunity to connect with potential customers every single day through Facebook apps. </p>
                                                         </div>
                                                     </a>
                                                     <a href="#" class="block lg:flex gap-4 mb-10 md:mb-7">
