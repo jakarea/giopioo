@@ -38,6 +38,8 @@ $categories = get_categories( array(
             </div>
         </div>
     </section>
+
+    
     <!--Blog Category Section [End]-->
 
     <!--Banner Section [Start]-->
@@ -55,17 +57,18 @@ $categories = get_categories( array(
             <div class="flex flex-col-reverse lg:flex-row lg:items-center">
                 <div class="lg:w-1/2 lg:pr-20 pt-10">
                     <h1 class="text-giopio-black giopio-title-size font-bold mb-10"><?php the_title() ?></h1>
-                    <p class="mb-10 text-base 2xl:text-lg text-giopio-text leading-7 font-medium"><?php the_excerpt()?></p>
-                    <br/>
+                    <p class="mb-10 text-sm lg:text-md xl:text-base 2xl:text-xl 2xl:leading-8 text-giopio-text leading-8 font-normal"><?php the_excerpt()?></p>
+                    <br>
                     <div class="md:flex gap-7 items-center">
                         <a href="<?php echo get_permalink() ?>" class="giopio-btn text-sm 2xl:text-base px-10 text-center font-medium 2xl:font-semibold duration-300 hover:bg-giopio-black">Read Full Post</a>
-                        <span class="mt-5 md:mt-0 block text-sm 2xl:text-base text-giopio-text font-medium">Just A <?php do_action('show_reading_time', get_the_content() )?> Read</span>
+                        <span class="mt-5 md:mt-0 block text-sm 2xl:text-base text-giopio-text font-medium">Just A 5 Min Read</span>
                     </div>
                 </div>
                 <div class="lg:w-1/2 flex justify-end">
                     <?php the_post_thumbnail( "blog-v-image", 'class="w-full lg:w-auto max-w-full xl:blog-banner rounded-md"' ); ?>
                 </div>
             </div>
+
             <?php
                 endwhile;
                 endif;
@@ -73,16 +76,18 @@ $categories = get_categories( array(
             ?>
         </div>
     </section>
+
     <!--Banner Section [End]-->
 
-    <!--Blog Section [Start]-->
-    <section class="section-big-padding">
+
+     <!--Blog Section [Start]-->
+     <section class="section-big-padding">
         <div class="container">
             <div class="mb-14 2xl:mb-20">
                 <div class="w-20 h-1 bg-giopio-orange mb-4"></div>
                 <h2 class="text-giopio-black giopio-title-size font-bold mb-2"><span class="inline-block text-giopio-orange">Featured</span> From Our Top Authors</h2>
             </div>
-            <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:mx-36">
+            <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 md:mx-24 xl:mx-28">
             <?php 
                 $args = array(
                     'post_type'     => 'post',
@@ -94,25 +99,25 @@ $categories = get_categories( array(
                 
             ?>
                 <div>
-                    <div class="group rounded-lg blog-box-shdow">
+                    <div class="group rounded-2xl blog-box-shdow">
                         <?php 
                             if (has_post_thumbnail() ) :     
                         ?>
-                        <div class="rounded-t-lg overflow-hidden">
-                        <?php the_post_thumbnail( "blog-v-image", 'class=w-full rounded-t-lg duration-300 group-hover:scale-110' ); ?>
+
+                        <div class="rounded-t-2xl overflow-hidden">
+                            
+                            <?php the_post_thumbnail( "blog-v-image", 'class=w-full rounded-t-2xl duration-300 group-hover:scale-110' ); ?>
                         </div>
                         <?php endif ?>
                         <div class="px-5 pb-7">
-                            <h4 class="blog-thumbnail-title"><a class="text-giopio-black duration-300 hover:text-giopio-orange" href=" <?php echo get_permalink() ?>"><?php the_title() ?></a></h4>
-                            <div class="text-sm text-giopio-text font-medium flex items-center justify-between">
+                            <h4 class="blog-thumbnail-title"><a class="text-giopio-black duration-300 hover:text-giopio-orange" href="<?php echo get_permalink() ?>"><?php the_title() ;?></a></h4>
+                            <div class="text-sm lg:text-md xl:text-base 2xl:text-lg 2xl:leading-8 text-giopio-text font-medium flex items-center justify-between">
                                 <a href="#" class="flex items-center gap-3 duration-300 hover:text-giopio-orange">
                                     <?php
                                         $user_id = get_the_author_meta('ID');
                                     ?>
-                                    <img src="<?= get_avatar_url($user_id, 40);?>" class="rounded-full" style="width:40px" alt="<?php echo get_the_author_meta('nickname')?>">
-                                    <?php echo get_the_author_meta('nickname')?>
-                                </a>
-                                <span><?php do_action('show_reading_time', get_the_content() )?> Read</span>
+                                    <img src="<?= get_avatar_url($user_id, 40);?>" class="rounded-full" style="width:40px" alt="<?php echo get_the_author_meta('nickname')?>"><?php echo get_the_author_meta('nickname')?></a>
+                                <span><?php do_action('show_reading_time', get_the_content() )?> read</span>
                             </div>
                         </div>
                     </div>
@@ -122,9 +127,8 @@ $categories = get_categories( array(
                     endif;
                     wp_reset_postdata();
                 ?>
-                
                 <div>
-                    <div class="group rounded-lg blog-box-shdow px-7 pt-14 pb-14 h-full flex justify-between flex-col">
+                    <div class="group rounded-2xl blog-box-shdow px-7 pt-14 pb-14 h-full flex justify-between flex-col">
                         <h3 class="blog-highlight-title font-bold text-giopio-black">An Outsourcing<br> Agency For<br> <span class="inline-block text-giopio-orange">Digital Transformation</span></h3>
                         <div>
                             <a href="#" class="giopio-btn text-sm 2xl:text-base font-semibold w-full text-center mb-5 duration-300 hover:bg-giopio-black">Start A Project Now</a>
@@ -136,7 +140,6 @@ $categories = get_categories( array(
         </div>
     </section>
     <!--Blog Section [End]-->
-
 
     <section class="section-big-padding pt-0">
         <div class="container">
@@ -158,27 +161,27 @@ $categories = get_categories( array(
                 ?>
                     <div class="md:flex group gap-10 items-center mb-20 md:mb-7">
                         <div class="mb-10 md:mb-0 rounded-lg overflow-hidden w-full md:w-56 h-auto md:h-56">
-                            
-                            <?php the_post_thumbnail( "blog-h-image", 'class="w-full h-full object-cover rounded-lg duration-300 group-hover:scale-110"' ); ?>
+                            <?php the_post_thumbnail( "blog-h-image", 'class=w-full h-full object-cover rounded-lg duration-300 group-hover:scale-110' ); ?>
                         </div>
                         <div class="md:w-[calc(100%_-_17rem)]">
                             <div class="mb-5">
-                                <h4 class="blog-title-size font-bold mb-5"><a class="text-giopio-black duration-300 hover:text-giopio-orange" href="<?php echo get_permalink() ?>"><?php the_title() ?></a></h4>
-                                <p class="text-base 2xl:text-lg text-giopio-text leading-6 font-medium"><?php the_excerpt()?></p>
+                                <h4 class="blog-title-size font-bold mb-5"><a class="text-giopio-black duration-300 hover:text-giopio-orange" href="<?php echo get_permalink() ?>"><?php the_title(); ?></a></h4>
+                                <p class="text-base lg:text-md xl:text-base 2xl:text-xl 2xl:leading-7 text-giopio-text leading-6 font-medium"><?php the_excerpt()?></p>
                             </div>
                             <div class="text-sm text-giopio-text font-medium flex items-center gap-2">
-                                <a href="#" class="flex items-center gap-3 duration-300 hover:text-giopio-orange">
-                                <?php
+                            <?php
                                         $user_id = get_the_author_meta('ID');
                                     ?>
-                                    <img src="<?= get_avatar_url( $user_id ) ?>" class="rounded-full" style="width:40px" alt="<?php echo get_the_author_meta('nickname')?>">
-                                    <?php echo get_the_author_meta('nickname')?></a>
+                                <a href="#" class="flex items-center gap-3 duration-300 hover:text-giopio-orange">
+                                    <img src="<?= get_avatar_url( $user_id ) ?>" class="rounded-full"  style="width:40px" alt="<?php echo get_the_author_meta('nickname')?>">
+                                    <?php echo get_the_author_meta('nickname')?>
+                                </a>
                                 <span class=" inline-block w-1 h-1 bg-giopio-text rounded-full"></span>
-                                <span><?php do_action('show_reading_time', get_the_content() )?> Read</span>
+                                <span><?php do_action('show_reading_time', get_the_content() )?> read</span>
                             </div>
                         </div>
                     </div>
-
+                    
                     <?php
                         endwhile;
                         endif;

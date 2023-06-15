@@ -31,3 +31,9 @@ function eleblikli_string_limit($params){
     $limit = $params[1];
     return substr($string,0, 140);
 }
+
+function custom_excerpt_more( $excerpt ) {
+    return '';
+}
+add_filter( 'excerpt_more', 'custom_excerpt_more' );
+

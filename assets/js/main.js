@@ -32,19 +32,35 @@ window.addEventListener('scroll', function() {
     scrollPosition = window.scrollY;
 
     if (scrollPosition >= 10) {
-        header.classList.add('menu-sticky');
+        header.classList.add('bg-white');
     }else{
-        header.classList.remove('menu-sticky');
+        header.classList.remove('bg-white');
     }
 });
 
 // Giopio Modal
-const openGiopioModal = document.querySelector('#openGiopioModal');
-const giopioModalClose = document.querySelector('#giopioModalClose');
+const openGiopioModalFooter = document.querySelector('.openGiopioModalFooter');
+const openGiopioModal = document.querySelector('.openGiopioModal');
+const openGiopioModalNew = document.querySelector('.openGiopioModalNew');
+
+const giopioModalClose = document.querySelector('.giopioModalClose');
 const giopioContactModal = document.querySelector('.giopio-modal');
 const giopioContactModalBackdrop = document.querySelector('.giopio-modal-backdrop');
 
-openGiopioModal.addEventListener('click', function(e){
+
+openGiopioModalNew.addEventListener('click', function(e){ 
+    e.preventDefault();
+    giopioContactModal.classList.add('active');
+    giopioContactModalBackdrop.classList.add('active');
+});
+
+openGiopioModalFooter.addEventListener('click', function(e){ 
+    e.preventDefault(); 
+    giopioContactModal.classList.add('active');
+    giopioContactModalBackdrop.classList.add('active');
+});
+
+openGiopioModal.addEventListener('click', function(e){ 
     e.preventDefault();
     giopioContactModal.classList.add('active');
     giopioContactModalBackdrop.classList.add('active');
@@ -76,24 +92,32 @@ function slide(direction){
 
 
 // search box
-const searchBtn = document.querySelector('#searchBtn');
-const searchField = document.querySelector('#searchField');
-if(searchBtn){
-searchBtn.addEventListener('click', function(e){
-    e.preventDefault();
-    searchField.classList.toggle('block');
-    searchField.classList.toggle('hidden');
-});
-}
+// const searchBtn = document.querySelector('#searchBtn');
+// const searchField = document.querySelector('#searchField');
+// searchBtn.addEventListener('click', function(e){
+//     e.preventDefault();
+//     searchField.classList.toggle('block');
+//     searchField.classList.toggle('hidden');
+// });
 
-// Add class active to nav item
-const cururl = window.location.href;                
-const urlarray = cururl.split("/");
-var page = urlarray[4]
-const links = document.getElementsByClassName('giopio-navlink');
-for(let  i = 0; i< links.length; i++){
-    if(links[i].href.includes(page)){
-        links[i].style.color = "#fb6400";
-        // links[i].classList.add('active')
-    }
+
+function addLink() {
+    
+    var selection = window.getSelection();
+    pagelink = ". Read more at: " + document.location.href;
+    copytext = selection + pagelink;
+    
+    newdiv = document.createElement('div');
+
+    newdiv.style.position = 'absolute';
+    newdiv.style.left = '-99999px';
+
+    document.body.appendChild(newdiv);
+    newdiv.innerHTML = copytext;
+    selection.selectAllChildren(newdiv);
+
+    window.setTimeout(function () {
+        document.body.removeChild(newdiv);
+    }, 100);
 }
+document.addEventListener('copy', addLink);

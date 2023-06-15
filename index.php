@@ -21,7 +21,7 @@ get_header();
 
 	<?php get_template_part('template-parts/our-team');?>
     
-	<?php get_template_part('template-parts/testimonials');?>
+	<!-- <?php get_template_part('template-parts/testimonials');?>
     
 	<?php get_template_part('template-parts/latest-blog');?>
     
